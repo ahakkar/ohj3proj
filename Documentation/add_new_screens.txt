@@ -1,0 +1,14 @@
+Instructions for further adding windows for future development.
+
+Screens are defined in factory/ScreenType.java enum. The enum contains an
+example.
+
+@author Antti Hakkarainen
+
+1. Add a new enum to ScreenType.java
+2. Add a new .fxml to resources/fi/sisusapp/view
+3. Implement a new ViewModel based on abstract ViewModel class,
+   and store it to /viewmodel where the other viewmodels are.
+4. Implement a new view Controller based on abstract Controller class,
+   and store it to /view where the other view controllers are.
+5. Implement logic to switch between desired screens in the viewmodels.

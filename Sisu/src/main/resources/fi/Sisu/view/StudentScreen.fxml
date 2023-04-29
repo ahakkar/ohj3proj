@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox prefWidth="1024.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label style="-fx-font-size: 14; -fx-font-weight: BOLD;" text="Student info:" />
+      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="691.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="158.66668701171875" minWidth="10.0" prefWidth="76.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="452.00000000000006" minWidth="336.6666666666667" prefWidth="336.6666666666667" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="40.0" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <TextField fx:id="firstNameTextField" nodeOrientation="LEFT_TO_RIGHT" prefWidth="300.0" GridPane.columnIndex="1" />
+            <TextField fx:id="lastNameTextField" nodeOrientation="LEFT_TO_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="studentIdTextField" nodeOrientation="LEFT_TO_RIGHT" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Label fx:id="degreeProgrammeLabel" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="firstNameLabel" nodeOrientation="LEFT_TO_RIGHT" text="First name:" />
+            <Label fx:id="lastNameLabel" nodeOrientation="LEFT_TO_RIGHT" text="Last name:" GridPane.rowIndex="1" />
+            <Label fx:id="studentIDLabel" nodeOrientation="LEFT_TO_RIGHT" text="Student ID:" GridPane.rowIndex="2" />
+            <Label fx:id="studyProgramLabel" nodeOrientation="LEFT_TO_RIGHT" text="Study program:" GridPane.rowIndex="3" />
+            <Button fx:id="selectStudyProgramButton" mnemonicParsing="false" text="Select study program" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <GridPane.margin>
+                  <Insets left="10.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+      <HBox nodeOrientation="RIGHT_TO_LEFT" prefHeight="40.0" prefWidth="1024.0">
+         <children>
+            <Button fx:id="editInfoButton" mnemonicParsing="false" text="Edit name">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="cancelButton" mnemonicParsing="false" text="Cancel">
+               <HBox.margin>
+                  <Insets right="10.0" />
+               </HBox.margin>
+            </Button>
+            <Button fx:id="saveChangesButton" mnemonicParsing="false" text="OK" />
+         </children>
+      </HBox>
+   </children>
+   <padding>
+      <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+   </padding>
+</VBox>

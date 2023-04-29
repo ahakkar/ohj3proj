@@ -1,0 +1,6 @@
+/Sisu/target/
+.vscode/
+.VSCodeCounter/
+target/
+students/
+data.json

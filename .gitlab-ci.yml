@@ -1,0 +1,81 @@
+# STAGES:
+stages:
+  - build
+  - test
+#  - code_coverage
+#  - code_analysis
+
+# Use a Maven Docker image with OpenJDK 18
+image:
+  name: "maven:3.8.5-openjdk-17"
+
+# Cache the Maven dependencies
+# This is faster, but can cause issues if the dependencies change
+# See https://docs.gitlab.com/ee/ci/caching/ for more information
+# ALSO this makes it so that the build enviroment is not "clean"
+cache:
+  paths:
+    - .m2/repository
+
+# BUILD stage:
+build:
+  stage: build
+  tags:
+    - compcs140
+  script:
+    - cd Sisu/
+    - mvn compile -X
+
+# TEST stage:
+test:
+  stage: test
+  tags:
+    - compcs140
+  script:
+    - cd Sisu/
+    - mvn test
+
+# Code coverage tests with JaCoCo
+#jacoco:
+#  stage: code_coverage
+#  tags:
+#    - compcs140
+#  script:
+#    - cd Sisu/
+#    - mvn test jacoco:report
+#  artifacts:
+#    paths:
+#      - Sisu/target/site/jacoco/
+#      - Sisu/target/site/jacoco-aggregate/
+#    expire_in: 1 week # Set an expiration date
+
+# Code analysis with Checkstyle
+
+#checkstyle:
+#  stage: code_analysis
+#  tags:
+#    - compcs140
+#  # Try to install xslt processor
+#  before_script:
+#    - apk update
+#    - apk add libxslt
+#  script:
+#    - cd Sisu/
+#    - mvn checkstyle:checkstyle@checkstyle
+#    # converts the xml report to a single file html report
+#    - xsltproc -o target/checkstyle-aggregate.html checkstyle-noframes.xsl target/checkstyle-report.xml
+#  # exports the Checkstyle report as an artifact so it can be viewed from gitlab
+#  artifacts:
+#    paths:
+#      - Sisu/target/checkstyle-aggregate.html
+#    expire_in: 1 week # Set an expiration date
+
+# these will upload the test results to the GitLab UI
+#  artifacts:
+#    when: always
+#    paths:
+#      - Sisu/target/surefire-reports/
+
+#    - mvn test -e -X
+#    - cat target/surefire-reports/*.txt
+

@@ -1,0 +1,118 @@
+/* :root {
+    --color-brand-purple: #4E008E;
+    --color-electric-violet: #9750FA;
+    --color-mauve: #D6A5FF;
+    --color-port-gore: #2F2859;
+    --color-deep-purple: #370065;
+    --color-periwinkle-gray: #E1E5F4;
+    --color-beige: #E8E0DB;
+    --color-news: #89D4FF;
+    --color-study: #3FD1AF;
+    --color-service: #FFFB88;
+    --color-research: #F5BCFF;
+    --color-contact: #FF7C91;
+    --color-notification: #CF286F;
+    --color-black: #000000;
+    --color-black-80: #333333;
+    --color-black-60: #5C5C5C;
+    --color-black-40: #999999;
+    --color-black-20: #CCCCCC;
+    --color-black-10: #E6E6E6;
+    --color-black-5: #F2F2F2;
+    --color-black-2: #FAFAFA;
+    --color-white: #FFFFFF;
+    --color-blue-grey-dark: #102027;
+    --color-blue-grey-med: #2E3C43;
+    --color-blue-grey-light: #3A4B54;
+    --color-success-base: #38850F;
+    --color-error-base: #CE013B;
+    --color-alert-base: #EEC401;
+    --color-info-base: #0077C7;
+    --color-success-light: #7FFF3B;
+    --color-error-light: #FF7098;
+    --color-alert-light: #FFE471;
+    --color-info-light: #7CCBFF;
+} */
+
+.screen-label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+}
+
+.main-label {
+    -fx-text-fill: white;
+}
+
+.text-field {
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+}
+
+.non-editable-textfield {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-border-color: transparent;
+}
+
+.editable-textfield {
+    -fx-background-color: #FFFFFF;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+}
+
+.course-webview {
+    -fx-background-color: white;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+}
+
+/* tree-cell, does not work */
+.tree-cell:selected .hbox.label {
+    -fx-text-fill: black;
+}
+
+.tree-cell:selected .hbox {
+    -fx-text-fill: black;
+}
+
+.tree-cell:hover .hbox.label {
+    -fx-background-color: black;
+}
+
+/* button */
+.button {
+    -fx-background-color: #3FD1AF;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+}
+
+/* combo-box */
+.combo-box {
+    -fx-background-color: #3FD1AF;
+    -fx-border-width: 1;
+    -fx-border-color: black;
+}
+
+.combo-box .button {
+    -fx-background-color: #89D4FF;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: #89D4FF;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #FFFFFF;
+}
+
+.combo-box .list-cell {
+    -fx-background-color: #FFFFFF;
+    -fx-text-fill: #212121;
+}
+
+.combo-box .list-cell:selected {
+    -fx-background-color: #89D4FF;
+}
+
