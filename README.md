@@ -23,3 +23,5 @@ Technologies used:
 - JaCoCo, for checking test coverage
 
 Program was structured using the Model-View-ViewModel pattern.
+
+![Image of the Degree Programme view.](Documentation/image01.png)
